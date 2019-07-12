@@ -1,0 +1,24 @@
+<div class="main-div">
+    <button id="open" class="button" (click)="openModal('modal-id')">Open Modal</button>
+</div>
+
+<modal id="modal-id">
+    <div class="modal">
+        <div class="modal-body">
+            <h1>Main modal</h1>
+            <button class="button" (click)="closeModal('modal-id');">Close</button>
+            <button class="button" (click)="openModal('nested-modal-id')">Open Nested Modal</button>
+        </div>
+    </div>
+    <div class="modal-background"></div>
+</modal>
+
+<modal id="nested-modal-id">
+    <div class="modal">
+        <div class="modal-body">
+            <h1>Nested Modal</h1>
+            <button class="button" (click)="closeModal('nested-modal-id');">Close</button>
+        </div>
+    </div>
+    <div class="modal-background"></div>
+</modal>
